@@ -43,6 +43,11 @@ app.get('/', (req, res) => {
   res.send('Nope')
 })
 
+///passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./config/passport')(passport);
 ///start server
 app.listen(port, () =>{
   console.log('server started on port '+port);
