@@ -41,6 +41,10 @@ app.use('/users', users);
 //Index Route
 app.get('/', (req, res) => {
   res.send('Nope')
+});
+
+app.get('/',(req, res) => {
+  res.send('Invalid Endpoint');
 })
 
 ///passport middleware
